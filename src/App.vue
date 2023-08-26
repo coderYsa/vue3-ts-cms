@@ -1,10 +1,5 @@
 <template>
   <div id="coderYsa">
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-cascader />
-    <router-link to="/login">登录</router-link>
-    <router-link to="/main">主页</router-link>
     <router-view></router-view>
   </div>
 </template>
@@ -17,4 +12,8 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+#coderYsa {
+  height: 100%;
+}
+</style>
