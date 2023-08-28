@@ -5,7 +5,10 @@ import {
   requestUserInfoById,
   requestUserMenusByRoleId
 } from '@/service/login/login'
+
 import localCache from '@/utils/cache'
+import { mapMenusToRoutes } from '@/utils/map-menus'
+
 import router from '@/router'
 
 import { IAccount } from '@/service/login/type'
@@ -31,6 +34,15 @@ const loginModule: Module<ILoginState, IRootState> = {
     },
     changeUserMenus(state, userMenus: any) {
       state.userMenus = userMenus
+      // 注册动态路由根据后台给的用户菜单注册路由
+      // userMenus => routes
+      const routes = mapMenusToRoutes(userMenus)
+      console.log(routes, '路由')
+
+      // 将routes => router.main.children
+      routes.forEach((route) => {
+        router.addRoute('main', route)
+      })
     }
   },
   actions: {
@@ -56,6 +68,8 @@ const loginModule: Module<ILoginState, IRootState> = {
       // 4.跳到首页
       router.push('/main')
     },
+
+    // 从缓存获取用户信息
     loadLocalLogin({ commit }) {
       const token = localCache.getCache('token')
       if (token) {

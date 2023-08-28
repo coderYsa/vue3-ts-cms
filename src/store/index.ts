@@ -1,8 +1,8 @@
-import { createStore } from 'vuex'
+import { createStore, Store, useStore as useVuexStore } from 'vuex'
 
 import login from './login/login'
 
-import { IRootState } from './types'
+import { IRootState, IStoreType } from './types'
 
 const store = createStore<IRootState>({
   state() {
@@ -19,9 +19,12 @@ const store = createStore<IRootState>({
   }
 })
 
-// 刷新后从缓存获取用户信息和token
 export function setupStore() {
   store.dispatch('login/loadLocalLogin')
+}
+
+export function useStore(): Store<IStoreType> {
+  return useVuexStore()
 }
 
 export default store
