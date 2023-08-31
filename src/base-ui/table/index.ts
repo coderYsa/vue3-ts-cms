@@ -1,3 +1,3 @@
-import ysaTable from './src/table.vue'
+import YsaTable from './src/table.vue'
 
-export default ysaTable
+export default YsaTable

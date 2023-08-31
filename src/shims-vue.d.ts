@@ -6,3 +6,4 @@ declare module '*.vue' {
 }
 
 declare let $store: any
+declare module 'element-plus/dist/locale/zh-cn.mjs';

@@ -3948,10 +3948,10 @@
   "resolved" "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.498.tgz"
   "version" "1.4.498"
 
-"element-plus@^2.3.9":
-  "integrity" "sha512-TIOLnPl4cnoCPXqK3QYh+jpkthUBQnAM21O7o3Lhbse8v9pfrRXRTaBJtoEKnYNa8GZ4lZptUfH0PeZgDCNLUg=="
-  "resolved" "https://registry.npmjs.org/element-plus/-/element-plus-2.3.9.tgz"
-  "version" "2.3.9"
+"element-plus@^2.3.12":
+  "integrity" "sha512-fAWpbKCyt+l1dsqSNPOs/F/dBN4Wp5CGAyxbiS5zqDwI4q3QPM+LxLU2h3GUHMIBtMGCvmsG98j5HPMkTKkvcA=="
+  "resolved" "https://registry.npmjs.org/element-plus/-/element-plus-2.3.12.tgz"
+  "version" "2.3.12"
   dependencies:
     "@ctrl/tinycolor" "^3.4.1"
     "@element-plus/icons-vue" "^2.0.6"
