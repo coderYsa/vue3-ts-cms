@@ -13,7 +13,7 @@
           type="primary"
           size="medium"
           @click="handleNewClick"
-          >{{ contentTableConfig.newBtnTitle ?? '新建数据' }}</el-button
+          >{{ contentTableConfig!.newBtnTitle ?? '新建数据' }}</el-button
         >
       </template>
 
@@ -94,7 +94,6 @@ export default defineComponent({
 
     // 发送网络请求
     const getPageData = (queryInfo: any = {}) => {
-      console.log(queryInfo, '查询字段')
       if (!isQuery) return
       store.dispatch('system/getPageListAction', {
         pageName: props.pageName,

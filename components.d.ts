@@ -7,10 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BarEchart: typeof import('./src/components/page-charts/src/bar-echart.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
@@ -40,11 +42,15 @@ declare module 'vue' {
     ElTabPane: typeof import('element-plus/es')['ElTabPane']
     ElTabs: typeof import('element-plus/es')['ElTabs']
     ElTree: typeof import('element-plus/es')['ElTree']
+    LineEchart: typeof import('./src/components/page-charts/src/line-echart.vue')['default']
+    MapEchart: typeof import('./src/components/page-charts/src/map-echart.vue')['default']
     NavHeader: typeof import('./src/components/nav-header/src/nav-header.vue')['default']
     NavMenu: typeof import('./src/components/nav-menu/src/nav-menu.vue')['default']
     PageContent: typeof import('./src/components/page-content/src/page-content.vue')['default']
     PageModal: typeof import('./src/components/page-modal/src/page-modal.vue')['default']
     PageSearch: typeof import('./src/components/page-search/src/page-search.vue')['default']
+    PieEchart: typeof import('./src/components/page-charts/src/pie-echart.vue')['default']
+    RoseEchart: typeof import('./src/components/page-charts/src/rose-echart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UserInfo: typeof import('./src/components/nav-header/src/user-info.vue')['default']

@@ -1,5 +1,6 @@
 import { ILoginState } from './login/types'
 import { ISystemState } from './main/system/types'
+import { IAnalysis } from './main/analysis/types'
 
 export interface IRootState {
   entireDepartment: any[]
@@ -10,6 +11,7 @@ export interface IRootState {
 export interface IRootWithModule {
   login: ILoginState
   system: ISystemState
+  analysis: IAnalysis
 }
 
 export type IStoreType = IRootState & IRootWithModule
